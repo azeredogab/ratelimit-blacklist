@@ -20,11 +20,14 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.302
+    
+    - name: Test with the dotnet CLI
+      run: dotnet test
 
-    - name: Geração do package
+    - name: Creating the Package
       run: dotnet pack ${{ env.PROJECT_PATH }} -c Release -o out
 
-    - name: Push no NuGet
+    - name: Push to NuGet
       run: |
         cd out
         dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SOURCE }} --skip-duplicate
