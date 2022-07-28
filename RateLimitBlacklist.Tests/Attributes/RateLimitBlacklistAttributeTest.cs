@@ -10,7 +10,7 @@ namespace RateLimitBlacklist.Tests.Attributes
         {
             var underTest = new RateLimitWithBlacklist(5, 10, 15);
 
-            Assert.Equal(10, underTest.MaxRequests);
+            Assert.Equal(5, underTest.MaxRequests);
             Assert.Equal(10, underTest.TimeWindow);
             Assert.Equal(15, underTest.BlockTime);
         }
