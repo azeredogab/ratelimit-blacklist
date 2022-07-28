@@ -9,7 +9,7 @@ on:
 jobs:
   pack-push:
     env:
-      CAMINHO_PROJETO: ./Groffe.Distancias/Groffe.Distancias.csproj
+      CAMINHO_PROJETO: ./RateLimitBlacklist/RateLimitBlacklist.csproj
 
     runs-on: ubuntu-latest
 
