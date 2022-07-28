@@ -5,9 +5,10 @@ namespace RateLimitBlacklist.Extensions
 {
     public static class RateLimitBlacklistInMemoryExtension
     {
-        public static IServiceCollection AddRateLimitBlacklistInMemory(this IServiceCollection services)
+        public static void AddRateLimitBlacklistInMemory(this IServiceCollection services)
         {
-            return services.AddTransient<IRateLimitBlacklistClientService, RateLimitBlacklistClientInMemoryService>();
+            services.AddMemoryCache();
+            services.AddTransient<IRateLimitBlacklistClientService, RateLimitBlacklistClientInMemoryService>();
         }
     }
 }
