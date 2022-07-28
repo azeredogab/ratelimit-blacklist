@@ -27,4 +27,4 @@ jobs:
     - name: Push no NuGet
       run: |
         cd out
-        dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.PROJECT_PATH }} --skip-duplicate
+        dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SOURCE }} --skip-duplicate
