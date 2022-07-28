@@ -47,7 +47,6 @@ namespace RateLimitBlacklist.AspNetCore.Middlewares
 
             if (client.NumberOfRequestsInTheTimeWindow > metadata.MaxRequests)
             {
-
                 client.Block(DateTime.UtcNow.AddMinutes(metadata.BlockTime));
             }
 
