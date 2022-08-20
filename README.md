@@ -43,6 +43,7 @@ Como podemos ver no exemplo acima, foi adicionada a annotation RateLimitWithBlac
 - **TimeWindow:** Janela de tempo que o RateLimitWithBlacklist fica monitorando a quatidade de requisições que será realizada por um usuário.
 - **BlockTime:** Tempo de bloqueio que será aplicado em um usuário caso ultrapassse os parâmetros anteriores.
 
+
 *No exemplo acima, se o usuário fizer 3 tentativas de acesso seguidas na rota em um intervalo de 10 segundos, bloqueamos esse usuário por 20 minutos.*
 
 ## CHANGELOG
