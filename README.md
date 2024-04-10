@@ -40,8 +40,8 @@ public Task<IActionResult> Example()
 Como podemos ver no exemplo acima, foi adicionada a annotation RateLimitWithBlacklist com 3 parâmetros, são eles: 
 
 - **MaxRequest:** Quantidade máxima de requisições em uma Janela de tempo. 
-- **TimeWindow:** Janela de tempo que o RateLimitWithBlacklist fica monitorando a quatidade de requisições que será realizada por um usuário.
-- **BlockTime:** Tempo de bloqueio que será aplicado em um usuário caso ultrapassse os parâmetros anteriores.
+- **TimeWindow:** Janela de tempo (em segundos) que o RateLimitWithBlacklist fica monitorando a quatidade de requisições que será realizada por um usuário.
+- **BlockTime:** Tempo de bloqueio (em minutos) que será aplicado em um usuário caso ultrapassse os parâmetros anteriores.
 
 
 *No exemplo acima, se o usuário fizer 3 tentativas de acesso seguidas na rota em um intervalo de 10 segundos, bloqueamos esse usuário por 20 minutos.*
